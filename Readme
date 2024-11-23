@@ -1,0 +1,86 @@
+ ## prerequisites:
+
+Neovim 0.8.0 or later
+git
+A Nerd Font installed (for icons)
+ripgrep (for Telescope live grep)
+
+
+
+This configuration includes:
+
+Package Management:
+
+lazy.nvim (modern plugin manager)
+
+
+Essential Plugins:
+
+File Explorer (Neo-tree)
+Fuzzy Finder (Telescope)
+Syntax Highlighting (Treesitter)
+LSP Support (LSP Zero, Mason)
+Autocompletion (nvim-cmp)
+Git integration (gitsigns)
+Status line (lualine)
+Auto pairs
+Comment toggler
+
+
+Key Mappings:
+
+<Space> as leader key
+<leader>e - Toggle file explorer
+<leader>ff - Find files
+<leader>fg - Live grep
+<leader>fb - Find buffers
+LSP mappings (gd for definition, K for hover, etc.)
+
+
+Features:
+
+Syntax highlighting
+Auto-completion
+LSP support for multiple languages
+Git integration
+File browsing
+Fuzzy finding
+
+
+
+
+For LSP support, common language servers are pre-configured:
+
+TypeScript (tsserver)
+JavaScript (eslint)
+Python (pyright)
+Lua (lua_ls)
+Go (gopls)
+
+
+
+
+
+Key features of this structure:
+
+config/: Contains basic Neovim configurations
+
+options.lua: Basic Vim settings
+keymaps.lua: Key mappings
+autocmds.lua: Autocommands
+lazy.lua: Package manager setup
+
+
+plugins/: Manages all plugins
+
+Separated by category (ui, coding, lsp, tools)
+Individual config files in configs/
+Lazy loading setup for better startup time
+
+
+ftplugin/: Language-specific settings
+
+Automatically loaded for specific file types
+
+
+utils/: Helper functions for custom functionality
